@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Page with Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        table, th, td {
+            border: 1px solid #444;
+            border-collapse: collapse;
+            padding: 8px;
+        }
+        fieldset {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 2px solid #888;
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: inline-block;
+            width: 150px;
+            margin-top: 5px;
+        }
+        input, select, textarea {
+            padding: 5px;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My Enhanced HTML5 Web Page</h1>
+
+    <!-- LIST -->
+    <h2>Popular Programming Languages</h2>
+    <ul>
+        <li>Python</li>
+        <li>JavaScript</li>
+        <li>Java</li>
+        <li>C++</li>
+    </ul>
+
+    <!-- TABLE -->
+    <h2>Company Directory</h2>
+    <table>
+        <tr>
+            <th>Company</th>
+            <th>Contact</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>EGTC</td>
+            <td>Maria</td>
+            <td>Sierra Leone</td>
+        </tr>
+        <tr>
+            <td>Car Power</td>
+            <td>Ronald</td>
+            <td>Turkey</td>
+        </tr>
+    </table>
+
+    <!-- MEDIA -->
+    <h2>Sample Media</h2>
+    <img src="https://via.placeholder.com/400" alt="Placeholder Image" width="300">
+    <br><br>
+    <audio controls>
+        <source src="sample.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <br><br>
+    <video width="320" height="240" controls>
+        <source src="sample.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- FORM -->
+    <h2>Registration Form</h2>
+    <form action="#" method="post">
+        
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="John Doe" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@mail.com" required><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{8,15}" placeholder="Enter numbers only" required><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Account Details</legend>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" minlength="4" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" minlength="6" required><br>
+
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+                <option value="">Select Country</option>
+                <option value="sl">Sierra Leone</option>
+                <option value="ng">Nigeria</option>
+                <option value="gh">Ghana</option>
+            </select><br>
+
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="male" required> Male
+            <input type="radio" name="gender" value="female"> Female<br>
+
+            <label>Interests:</label>
+            <input type="checkbox" name="interest" value="coding"> Coding
+            <input type="checkbox" name="interest" value="design"> Design
+            <input type="checkbox" name="interest" value="music"> Music<br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Additional Info</legend>
+            <label for="bio">Short Bio:</label><br>
+            <textarea id="bio" name="bio" rows="4" cols="40" placeholder="Tell us about yourself..."></textarea><br>
+
+            <label for="profile-pic">Upload Profile Picture:</label>
+            <input type="file" id="profile-pic" name="profile-pic" accept="image/*"><br>
+        </fieldset>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
